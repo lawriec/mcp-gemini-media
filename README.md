@@ -18,8 +18,14 @@ Claude Desktop cannot natively process media files. This server bridges that gap
 
 ## Installation
 
+### Option 1: Direct install (no clone needed)
+
+No need to clone the repo. Just point your MCP config at the GitHub URL and `npx` handles the rest.
+
+### Option 2: Clone and build locally
+
 ```bash
-git clone https://github.com/YOUR_USERNAME/mcp-gemini-media.git
+git clone https://github.com/lawriec/mcp-gemini-media.git
 cd mcp-gemini-media
 npm install
 npm run build
@@ -32,6 +38,24 @@ Add this to your Claude Desktop config file:
 **Windows (Store)**: `%LOCALAPPDATA%\Packages\Claude_*\LocalCache\Roaming\Claude\claude_desktop_config.json`
 **Windows (standalone)**: `%APPDATA%\Claude\claude_desktop_config.json`
 **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+
+### Using npx (recommended)
+
+```json
+{
+  "mcpServers": {
+    "gemini-media": {
+      "command": "npx",
+      "args": ["-y", "github:lawriec/mcp-gemini-media"],
+      "env": {
+        "GEMINI_API_KEY": "your-api-key-here"
+      }
+    }
+  }
+}
+```
+
+### Using a local clone
 
 ```json
 {
