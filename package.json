@@ -1,0 +1,39 @@
+{
+  "name": "mcp-gemini-media",
+  "version": "1.0.0",
+  "description": "MCP server for analyzing audio and video files via Google Gemini",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "mcp-gemini-media": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gemini",
+    "audio",
+    "video",
+    "media",
+    "claude",
+    "ai"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@google/genai": "^1.42.0",
+    "@modelcontextprotocol/sdk": "^1.25.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5.3.3"
+  }
+}
